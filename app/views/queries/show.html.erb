@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @query.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <pre>
+<%= @query.content %>
+  </pre>
+</p>
+
+
+<%= link_to 'Edit', edit_query_path(@query) %> |
+<%= link_to 'Back', queries_path %>
