@@ -5,8 +5,11 @@
   <pre>
 <%= query.content %>
   </pre>
+  <p>Run: 
+    <%= link_to 'vivoDev', run_query_path(query, "vivoDev") %> |
+    <%= link_to 'vivoQA', run_query_path(query, "vivoQA") %> 
+  </p>
   <p>
-    <%= link_to 'Run', run_query_path(query) %> |
     <%= link_to 'Show', query %> |
     <%= link_to 'Edit', edit_query_path(query) %> |
     <%= link_to 'Destroy', query, :confirm => 'Are you sure?', :method => :delete %>
