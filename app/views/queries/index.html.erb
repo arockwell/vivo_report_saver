@@ -1,19 +1,15 @@
 <h1>Listing queries</h1>
 
 <% @queries.each do |query| %>
-  <p><%= query.title %></p>
-  <pre>
-<%= query.content %>
-  </pre>
+  <h3><%= query.title %></h3>
   <p>Run: 
     <%= link_to 'vivoDev', run_query_path(query, "vivoDev") %> |
-    <%= link_to 'vivoQA', run_query_path(query, "vivoQA") %> 
-  </p>
-  <p>
+    <%= link_to 'vivoQA', run_query_path(query, "vivoQA") %>  --
     <%= link_to 'Show', query %> |
     <%= link_to 'Edit', edit_query_path(query) %> |
     <%= link_to 'Destroy', query, :confirm => 'Are you sure?', :method => :delete %>
   </p>
+  <hr>
 <% end %>
 
 <br />
