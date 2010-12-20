@@ -5,7 +5,7 @@ class QueriesController < ApplicationController
   # GET /queries
   # GET /queries.xml
   def index
-    @queries = Query.all
+    @queries = Query.order('queries.title ASC').all
 
     respond_to do |format|
       format.html # index.html.erb
